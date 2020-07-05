@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/shopcar.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="clearfix">
+            <h1 class="logo"><a href="index.html">TRENDIANO</a></h1>
+            <div class="navbar">
+                <a href="login.html">登录</a>
+                <a href="#">注册</a>
+                <a href="#">我的账户</a>
+                <a href="#">我的收藏</a>
+                <a href="#">购物袋(<span class='carNum'>0</span>)</a>
+            </div>
+        </header>
+        <section>
+            <div class="buy-step"><img src="images/buy_step.png" alt=""></div>
+            <h2>购物袋</h2>
+            <div class="cart-tip">
+                <h3>优惠：单笔消费，满699元包邮</h3>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="cart-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th class="col_12_1">&nbsp;</th>
+                            <th class="col_4_1 align_left">商品名称</th>
+                            <th class="col_12_1">颜色/尺码</th>
+                            <th class="col_6_1">单价</th>
+                            <th class="col_6_1">数量</th>
+                            <th class="col_6_1">小计</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="page-num">1</div>
+            <div class="order-total clearfix">
+                <div class="selectAll">
+                    <input class="chooseAll" type="checkbox" checked>
+                    全选
+                </div>
+                <a class="deleteAll" href="#">删除全选</a>
+            </div>
+            <div class="total-sum clearfix">
+                <p>已选：<span class="cart-num">0</span>件<br>总计金额（不含运费）：￥<span class="cart-price">509.00</span></p>
+                <button>马上结算</button>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-top"></div>
+            <div class="footer-down">
+                <div class="link clearfix">
+                    <a href="#">隐私申明</a>
+                    <a href="#">联系我们</a>
+                </div>
+                <div class="copyright">
+                    <p>Copyright @ 2010-2020 广州赫基信息科技有限公司版权所有 增值电信业务经营许可证<a href="#">粤B2-20100553 粤ICP备10229258-4号</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <div class="sidebar">
+            <div class="go">
+                <a class="gotop" href="#part1">TOP</a>
+                <a class="goindex" href="index.html">返回首页</a>
+                <a class="gokefu" href="#">联系客服</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.addEventListener("scroll", () => {
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 0) {
+            document.querySelector('.gotop').style.visibility = "visible";
+        } else {
+            document.querySelector('.gotop').style.visibility = "hidden";
+        }
+    })
+    var goods = [{
+        goodsImg: 'images/cart_1.jpg',
+        goodsKinds: "Tre长特商品",
+        goodsName: "【2件9折 3件8折】个性印花系带板鞋男",
+        goodsNum: "3ZA4518660018",
+        goodsSize: "白色/40",
+        goodsPrice: 609,
+        goodscount: 1,
+    },
+    {
+        goodsImg: 'images/cart_2.jpg',
+        goodsKinds: "Tre长特商品",
+        goodsName: "【2件9折 3件8折】束脚裤拼接抽绳裤子",
+        goodsNum: "3ZC4066520090",
+        goodsSize: "黑色/M",
+        goodsPrice: 549,
+        goodscount: 1,
+    },
+    {
+        goodsImg: 'images/cart_3.jpg',
+        goodsKinds: "Tre端午放价",
+        goodsName: "【端午放价 1件5.6折】宽松连帽短袖风衣外套",
+        goodsNum: "3RC2092100510",
+        goodsSize: "绿色/M",
+        goodsPrice: 509,
+        goodscount: 1,
+    },
+    {
+        goodsImg: 'images/cart_4.jpg',
+        goodsKinds: "Tre端午放价",
+        goodsName: "【端午放价 1件5.6折】宽松连帽短袖风衣外套",
+        goodsNum: "3RC2092100010",
+        goodsSize: "米白/S",
+        goodsPrice: 509,
+        goodscount: 1,
+    },
+    {
+        goodsImg: "images/cart_5.jpg",
+        goodsKinds: "Tre长特商品",
+        goodsName: "【2件9折 3件8折】棉质宽松鹿刺绣卫衣",
+        goodsNum: "3ZC4106540410",
+        goodsSize: "黄色/XL",
+        goodsPrice: 479,
+        goodscount: 1,
+    }]
+    var tbody = document.querySelector('tbody');
+    for (var i = 0; i < goods.length; i++) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = `<td><input class="ischecked" type='checkbox' checked></td><td><img src=${goods[i].goodsImg} alt=""></td><td><div class="goodsNames"><P>[促销]<a href="#">${goods[i].goodsKinds}</a> </p><p>TRENDIANO</p><p><a href="#">${goods[i].goodsName}</a></p><p>货号：${goods[i].goodsNum}</P></div></td><td>${goods[i].goodsSize}</td><td class="goodsPrice">${goods[i].goodsPrice}</td><td><div><input class="goodscount" type="text" readonly="" value="1" defaultvalue="1"><div class="arrow-top"></div><div class="arrow-down"></div></div><a href="#">收藏</a>&nbsp;/&nbsp;<a class="delete" href="#">删除</a></td><td class="goods-sum"></td>`;
+        tbody.appendChild(tr);
+    }
+    var cartNum = parseInt(document.querySelector('.cart-num').innerHTML);
+    var carNum = parseInt(document.querySelector('.carNum').innerHTML);
+    var goodsSumArr = document.querySelectorAll('.goods-sum');
+    var goodsPriceArr = document.querySelectorAll('.goodsPrice');
+    var goodscountArr = document.querySelectorAll('.goodscount');
+    var arrowTop = document.querySelectorAll('.arrow-top');
+    var arrowDown = document.querySelectorAll('.arrow-down');
+    var ischeckedAll = document.querySelectorAll('.ischecked');
+    function total() {
+        var count = 0;
+        var sum = 0;
+        for (var i = 0; i < goods.length; i++) {
+            if (ischeckedAll[i].checked) {
+                count += goods[i].goodscount;
+                sum += goods[i].goodscount * goods[i].goodsPrice;
+                document.querySelector('.cart-num').innerHTML = count;
+                document.querySelector('.cart-price').innerHTML = sum;
+            } else {
+                document.querySelector('.cart-num').innerHTML = count;
+                document.querySelector('.cart-price').innerHTML = sum;
+            }
+        }
+    }
+    total();
+    for (var i = 0; i < goods.length; i++) {
+        carNum = carNum + goods[i].goodscount;
+        document.querySelector('.carNum').innerHTML = carNum;
+        if (ischeckedAll[i].checked) {
+            cartNum = cartNum + goods[i].goodscount;
+            document.querySelector('.cart-num').innerHTML = carNum;
+        }
+        goodsSumArr[i].innerHTML = goods[i].goodsPrice * goods[i].goodscount;
+
+        function up(ind) {
+            arrowTop[ind].onclick = function () {
+                goods[ind].goodscount++;
+                carNum++;
+                document.querySelector('.carNum').innerHTML = carNum;
+                goodscountArr[ind].value = goods[ind].goodscount;
+                goodsSumArr[ind].innerHTML = goods[ind].goodsPrice * goods[ind].goodscount;
+                total();
+            }
+
+        } (i)
+        up(i)
+        function down(ind) {
+            arrowDown[ind].onclick = function () {
+                if (goods[ind].goodscount > 1) {
+                    goods[ind].goodscount--;
+                    carNum--;
+                    document.querySelector('.carNum').innerHTML = carNum;
+                }
+                goodscountArr[ind].value = goods[ind].goodscount;
+                goodsSumArr[ind].innerHTML = goods[ind].goodsPrice * goods[ind].goodscount;
+                total();
+            }
+        } (i)
+        down(i)
+        var deleteArr = document.querySelectorAll('.delete');
+        function fun3(ind) {
+            deleteArr[ind].onclick = function () {
+                var deletetr = deleteArr[ind].parentNode.parentNode;
+                deletetr.innerHTML = '';
+                carNum -= goods[ind].goodscount;
+                document.querySelector('.carNum').innerHTML = carNum;
+                goods[ind].goodscount = 0;
+                total();
+            }
+        } (i)
+        fun3(i)
+    }
+    for (var i = 0; i < goods.length; i++) {
+        ischeckedAll[i].onclick = function () {
+            var chooseState = this.checked;
+            if (chooseState) {
+                var flag = true;
+                for (var i = 0; i < goods.length; i++) {
+                    if (!ischeckedAll[i].checked) {
+                        flag = false;
+                    }
+                }
+                document.querySelector('.chooseAll').checked = flag;
+            } else {
+                document.querySelector('.chooseAll').checked = false;
+            }
+            total();
+        }
+    }
+    document.querySelector('.chooseAll').onclick = function () {
+        var chooseState = this.checked;
+        for (var i = 0; i < goods.length; i++) {
+            ischeckedAll[i].checked = chooseState;
+            total();
+        }
+    }
+    var newtr = document.querySelectorAll('tbody tr');
+    document.querySelector('.deleteAll').onclick = function () {
+        for (var i = 0; i < goods.length; i++) {
+            if (ischeckedAll[i].checked === true) {
+                newtr[i].innerHTML = '';
+                carNum -= goods[i].goodscount;
+                document.querySelector('.carNum').innerHTML = carNum;
+                goods[i].goodscount = 0;
+                total();
+            }
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,115 @@
+
+.header-down{
+    width: 100%;
+    margin-top:55px;
+}
+.header-down-inner{
+    width: 62.8%;
+    min-width: 1180px;
+    margin:0 auto;
+}
+.header-down .banner{
+    width: 100%;
+}
+.header-down .banner img{
+    width: 100%;
+}
+section{
+    width: 100%;
+}
+.section-inner{
+    width: 62.8%;
+    min-width: 1180px;
+    margin:0 auto;
+}
+section .newin{
+    width: 100%;
+    margin-top:20px;
+
+}
+.newin .newin-pic>div{
+    width: 23.73%;
+    float:left;
+    margin-right:1.69%;
+    position: relative;
+}
+.newin .newin-pic>div:hover .word, .brand .brand-pic>div:hover .word{
+    background:rgba(0,0,0, 0.4);
+}
+.newin .newin-pic>div:nth-child(4), .brand .brand-pic>div:nth-child(3n+3){
+    margin-right:0px;
+}
+.newin .man,.brand .brands-box{
+    width: 100%;
+    font-size:0;
+}
+.newin img,.brand img{
+    width: 100%;
+}
+.newin .word,.brand .word{
+    width: 90%;
+    line-height: 33px;
+    color:#fff;
+    font-weight: bold;
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding-left:5%;
+    padding-right:5%;
+    font-size:1.6rem;
+    background:rgba(0,0,0,0);
+    transition: background 1s;
+}
+.newin .word:hover, .brand .word:hover{
+    background:rgba(0,0,0, 0.4);
+}
+.newin .more, .brand .more{
+    float:right;
+    line-height: 38px;
+    color: #717171;
+    font-size: 1.4rem;
+}
+.product{
+    margin-top:60px;
+}
+.product h3, .brand h3,.newin h3{
+    font-size: 2rem;
+    color:#7e7e7e;
+    margin-bottom:35px;
+}
+.product .pro-content>div{
+    width: 11.7%;
+    float:left;
+    margin-right:5%;
+}
+.product .pro-content>div:last-child{
+    margin-right:0;
+}
+.product .pro-content>div .pro-pic{
+    width: 66.6%;
+    float:left;
+}
+.product .pro-content>div a img{
+    width: 100%;
+}
+.product .pro-content>div .pro-word{
+    float:right;
+    font-size:1.4rem;
+    margin-top:50px;
+}
+section .brand{
+    width: 100%;
+    margin-top: 100px;
+}
+.brand .brand-pic>div{
+    width: 32.2%;
+    float:left;
+    margin-right:1.69%;
+    position: relative;
+}
+.brand .brand-pic>div:nth-child(1), .brand .brand-pic>div:nth-child(2), .brand .brand-pic>div:nth-child(3){
+    margin-bottom:20px;
+}
+.brand h3,.newin h3{
+    margin-bottom:15px;
+}

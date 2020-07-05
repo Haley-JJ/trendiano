@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/shopcar.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="clearfix">
+            <h1 class="logo"><a href="index.html">TRENDIANO</a></h1>
+            <div class="navbar">
+                <a href="login.html">登录</a>
+                <a href="#">注册</a>
+                <a href="#">我的账户</a>
+                <a href="#">我的收藏</a>
+                <a href="#">购物袋(<span class='cart-bag'>0</span>)</a>
+            </div>
+        </header>
+        <section>
+            <div class="buy-step"><img src="images/buy_step.png" alt=""></div>
+            <h2>购物袋</h2>
+            <div class="cart-tip">
+                <h3>优惠：单笔消费，满699元包邮</h3>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="cart-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th class="col_12_1">&nbsp;</th>
+                            <th class="col_4_1 align_left">商品名称</th>
+                            <th class="col_12_1">颜色/尺码</th>
+                            <th class="col_6_1">单价</th>
+                            <th class="col_6_1">数量</th>
+                            <th class="col_6_1">小计</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="page-num">1</div>
+            <div class="order-total clearfix">
+                <div class="selectAll">
+                    <input class="chooseAll" type="checkbox" checked>
+                    全选
+                </div>
+                <a class="deleteAll" href="#">删除全选</a>
+            </div>
+            <div class="total-sum clearfix">
+                <p>已选：<span class="cart-num">0</span>件<br>总计金额（不含运费）：￥<span class="cart-price">00.00</span></p>
+                <button>马上结算</button>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-top"></div>
+            <div class="footer-down">
+                <div class="link clearfix">
+                    <a href="#">隐私申明</a>
+                    <a href="#">联系我们</a>
+                </div>
+                <div class="copyright">
+                    <p>Copyright @ 2010-2020 广州赫基信息科技有限公司版权所有 增值电信业务经营许可证<a href="#">粤B2-20100553 粤ICP备10229258-4号</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <div class="sidebar">
+            <div class="go">
+                <a class="gotop" href="#part1">TOP</a>
+                <a class="goindex" href="index.html">返回首页</a>
+                <a class="gokefu" href="#">联系客服</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='js/jquery-3.4.1.min.js'></script>
+<script>
+    window.addEventListener("scroll", () => {
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 0) {
+            document.querySelector('.gotop').style.visibility = "visible";
+        } else {
+            document.querySelector('.gotop').style.visibility = "hidden";
+        }
+    })
+    var goods = [{
+        goodsImg: 'images/cart_1.jpg',
+        goodsKinds: "Tre长特商品",
+        goodsName: "【2件9折 3件8折】个性印花系带板鞋男",
+        goodsNum: "3ZA4518660018",
+        goodsSize: "白色/40",
+        goodsPrice: 609,
+        goodscount: 1,
+    },
+    {
+        goodsImg: 'images/cart_2.jpg',
+        goodsKinds: "Tre长特商品",
+        goodsName: "【2件9折 3件8折】束脚裤拼接抽绳裤子",
+        goodsNum: "3ZC4066520090",
+        goodsSize: "黑色/M",
+        goodsPrice: 549,
+        goodscount: 1,
+    },
+    {
+        goodsImg: 'images/cart_3.jpg',
+        goodsKinds: "Tre端午放价",
+        goodsName: "【端午放价 1件5.6折】宽松连帽短袖风衣外套",
+        goodsNum: "3RC2092100510",
+        goodsSize: "绿色/M",
+        goodsPrice: 509,
+        goodscount: 1,
+    },
+    {
+        goodsImg: 'images/cart_4.jpg',
+        goodsKinds: "Tre端午放价",
+        goodsName: "【端午放价 1件5.6折】宽松连帽短袖风衣外套",
+        goodsNum: "3RC2092100010",
+        goodsSize: "米白/S",
+        goodsPrice: 509,
+        goodscount: 1,
+    },
+    {
+        goodsImg: "images/cart_5.jpg",
+        goodsKinds: "Tre长特商品",
+        goodsName: "【2件9折 3件8折】棉质宽松鹿刺绣卫衣",
+        goodsNum: "3ZC4106540410",
+        goodsSize: "黄色/XL",
+        goodsPrice: 479,
+        goodscount: 1,
+    }]
+    if (goods.length) {
+        goods.forEach(function (item) {
+            var tr = $('<tr>');
+            tr.html(`<td><input class="ischecked" type='checkbox' checked></td><td><img src=${item.goodsImg} alt=""></td><td><div class="goodsNames"><P>[促销]<a href="#">${item.goodsKinds}</a> </p><p>TRENDIANO</p><p><a href="#">${item.goodsName}</a></p><p>货号：${item.goodsNum}</P></div></td><td>${item.goodsSize}</td><td class="goodsprice">${item.goodsPrice}</td><td><div><div class="goodscount">${item.goodscount}</div><div class="arrow-top"></div><div class="arrow-down"></div></div><a href="#">收藏</a>&nbsp;/&nbsp;<a class="delete" href="#">删除</a></td><td class="goods-sum">${item.goodsPrice * item.goodscount}</td>`);
+            $('tbody').append(tr);
+        });
+        getTotal($('.ischecked'));
+        //1.点击全选
+        $('.chooseAll').change(function () {
+            var state = $(this).prop('checked')
+            $('tbody tr .ischecked').prop('checked', state);
+            getTotal($('.ischecked'));
+        });
+        //2.点击复选框按钮
+        $('.ischecked').change(function () {
+            var state = $(this).prop('checked');
+            if (state) {
+                var flag = true;
+                $('.ischecked').each(function () {
+                    if (!$(this).prop('checked')) {
+                        flag = false;
+                    }
+                })
+                $('.chooseAll').prop('checked', flag);
+            } else {
+                $('.chooseAll').prop('checked', false);
+            }
+            getTotal($('.ischecked'));
+        });
+        //3.删除商品
+        $('.delete').click(function () {
+            $(this).parent().parent().remove();
+            getTotal($('.ischecked'));
+            var num = $(this).parents('tr').find('.goodscount').text() * 1;
+            bagNum = bagNum - num;
+            $('.cart-bag').text(bagNum);
+        });
+        //4.删除选中的商品
+        $('.deleteAll').click(function () {
+            $('.ischecked').each(function () {
+                if ($(this).prop('checked')) {
+                    $(this).parent().parent().remove();
+                    var num = $(this).parents('tr').find('.goodscount').text() * 1;
+                    bagNum = bagNum - num;
+                    $('.cart-bag').text(bagNum);
+                }
+            })
+            getTotal($('.ischecked'));
+        })
+        //5.加减商品的件数
+        $('.arrow-top').click(function () {
+            var num = $(this).parents('tr').find('.goodscount').text() * 1;
+            var price = $(this).parents('tr').find('.goodsprice').text() * 1;
+            console.log(price);
+            num++;
+            $(this).parents('tr').find('.goodscount').text(num);
+            $(this).parents('tr').find('.goods-sum').text(num * price);
+            bagNum = bagNum + 1;
+            $('.cart-bag').text(bagNum);
+            getTotal($('.ischecked'));
+        });
+        $('.arrow-down').click(function () {
+            var num = $(this).parents('tr').find('.goodscount').text() * 1;
+            var price = $(this).parents('tr').find('.goodsprice').text() * 1;
+            console.log(price);
+            if (num > 1) {
+                num--;
+                bagNum = bagNum - 1;
+                $('.cart-bag').text(bagNum);
+            }
+            $(this).parents('tr').find('.goodscount').text(num);
+            $(this).parents('tr').find('.goods-sum').text(num * price);
+            getTotal($('.ischecked'));
+        })
+        //6.计算总件数和总价钱的函数
+        function getTotal(goods) {
+            var totalNum = 0;
+            var totalPrice = 0;
+            goods.each(function () {
+                if ($(this).prop('checked')) {
+                    totalNum = totalNum + $(this).parents('tr').find('.goodscount').text() * 1;
+                    totalPrice = totalPrice + $(this).parents('tr').find('.goodscount').text() * 1 * $(this).parents('tr').find('.goodsprice').text() * 1;
+                }
+            })
+            $('.cart-num').text(totalNum);
+            $('.cart-price').text(totalPrice)
+        }
+        //7.购物袋
+        var bagNum = 0;
+        goods.forEach(function (item) {
+            bagNum = bagNum + item.goodscount;
+            $('.cart-bag').text(bagNum);
+        })
+
+
+    }
+
+</script>
+
+</html>

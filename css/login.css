@@ -1,0 +1,133 @@
+html,body{
+    height:100%;
+    font-size: 10px;
+    min-width: 1180px;
+}
+.wrap{
+    width: 100%;
+    height:100%;
+    background: url(../images/login_trendiano.jpg) no-repeat;
+    background-size: 100%;
+    position:relative;
+}
+.wrap>a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.tre-login{
+    width:28.65%;
+    background-color: #fff;
+    padding: 20px 0;
+    margin: 0 0 0 80px;
+    position:absolute;
+    left:50%;
+    top:30%;
+    z-index:999;
+}
+.tre-login h3{
+    color:#333;
+    padding:0 30px;
+    line-height: 26px;
+    margin-bottom:8px;
+    font-weight: bold;
+    font-size:1.6rem;
+}
+form{
+    width: 100%;
+    padding:0 30px;
+}
+form input{
+    width: 50%;
+    height: 20px;
+    padding: 3px;
+    border: 1px solid #f0f0ef;
+    line-height: 20px;
+    margin-bottom:10px;
+}
+form input:first-child{
+    width: 86%;
+}
+form input:nth-child(2){
+    float:left;
+}
+form>div{
+    float:left;
+    width: 90px;
+    line-height: 26px;
+    margin-left:4px;
+}
+form>div img{
+    width: 100%;
+}
+form .getnum, form .btn{
+    width: 82px;
+    line-height: 28px;
+    background-color: #f93d69;
+    color:#fff;
+    border:0;
+}
+form .error{
+    display: none;
+    width: 100%;
+    color:#f93d69;
+    font-size:1.2rem;
+}
+form .error>div{
+    display: block;
+    margin-top:-5px;
+}
+form .btn{
+    width: 85%;
+    padding: 4px 0;
+    margin: 6px 0;
+}
+.tre-login a{
+    float:right;
+    font-size:1.2rem;
+    color:#0d5b82;
+    margin-right:6px;
+}
+.tre-login .password{
+    margin-right:7%;
+}
+.telephone-error{
+    display:none;
+    position: absolute;
+    width: 350px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 12px #000;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding-bottom: 37px;
+    z-index:99999;
+}
+.telephone-error h3 {
+    background: #efefef;
+    color: #666;
+    cursor: pointer;
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    padding: 0 12px;
+    text-align: left;
+}
+.telephone-error p {
+    margin: 25px 0;
+    text-align: center;
+    font-size: 12px;
+}
+.telephone-error button {
+    margin: 0 auto;
+    padding: 6px 2em;
+    background: #efefef;
+    border: 1px solid #ccc;
+    color: #666;
+    cursor: pointer;
+}

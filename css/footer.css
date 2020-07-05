@@ -1,0 +1,216 @@
+footer{
+    width: 100%;
+    border-top:4px solid #c1a75f;
+    margin-top:68px;
+}
+.footer-top{
+    padding:20px 0;
+    background: url(../images/footer_bg_tre.png);
+}
+.footer-top-inner{
+    width: 62.8%;
+    min-width: 1180px;
+    margin:0 auto;
+}
+.footer-top-inner>div{
+    float:left;
+    height:319px;
+    border-right:1px solid #d8d8d8;
+}
+.footer-top .date{
+    width:16.44%;
+    padding-right:5.93%;
+}
+.footer-top h4{
+    color:#a0a0a0;
+    font-size: 1.4rem;
+    margin-bottom:8px;
+}
+.footer-top .date-box{
+    width: 54px;
+    height: 54px;
+    background-color: #fff;
+    margin-bottom:2px;
+}
+.footer-top .date-box .month{
+    font-size:1.2rem;
+    padding-top:4px;
+    display: block;
+    text-align: center;
+    color:#666666;
+}
+.footer-top .date-box .days{
+    font-size: 2.8rem;
+    display: block;
+    color: #666666;
+    text-align: center;
+}
+.footer-top .day img{
+    width: 100%;
+}
+.footer-top .contact{
+    width: 14.92%;
+    padding:0% 5.93%;
+}
+.footer-top .contact .weibo{
+    line-height: 22px;
+    background-image: url(../images/weibo_08.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    
+}
+.footer-top .contact h4:nth-child(3){
+    margin-top:20px;
+}
+.footer-top .contact .qrcode img{
+    width: 100%;
+}
+.footer-top .contact .weibo a{
+    color:#666666;
+    padding-left:30px;
+}
+.footer-top .contact .weibo:hover a{
+    color:#999999;
+}
+.footer-top .info{
+    width: 16.95%;
+    padding:0% 5.93%;
+}
+.footer-top .info a{
+    width: 100%;
+    display: block;
+}
+.footer-top .info img{
+    width: 100%;
+}
+.footer-top .about{
+    padding-left:5.93%;
+    border:0;
+    color:#666666;
+}
+.footer-top .about .tip-list ul{
+    float:left;
+}
+.footer-top .about .tip-list ul:first-child {
+    margin-right:16px;
+}
+.footer-top .about ul li{
+    line-height: 22px;
+}
+.footer-top li a{
+    color:#666666;
+    font-size:1.2rem;
+}
+.footer-top li a:hover{
+    color:#999999;
+}
+.footer-top .tip>span{
+    width: 100%;
+    display: block;
+    line-height: 24px;
+    padding-left:30px;
+    background-image: url(../images/kefu_07.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-bottom:5px;
+    font-size: 1.2rem;
+}
+.footer-top .tip .tip-phone{
+    background-image: url(../images/phone_09.png);
+}
+.footer-top .tip .tip-return{
+    background-image: url(../images/seven_11.png);
+}
+.footer-top .about >span{
+    float:left;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-top:15px;
+}
+.footer-top .about .tip-alipay{
+    width: 48px;
+    height: 21px;
+    background-image: url(../images/pay_17.png);
+    margin-right:16px;
+}
+.footer-top .about .tip-tenpay{
+    width: 45px;
+    height: 21px;
+    background-image: url(../images/money_20.png);
+}
+.footer-down{
+    width: 100%;
+    background-color: #000;
+}
+.footer-down-left{
+    float:left;
+    width: 145px;
+    height: 97px;
+    background-image: url(../images/logo-2_27.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left:30%;
+}
+.footer-down-right {
+    float:left;
+    margin-left:5.6%;
+    margin-top:20px;
+}
+.footer-down-right .footer-a{
+    margin-bottom:10px;
+}
+.footer-down-right .footer-a a{
+    color:#ccc;
+    font-size:1.2rem;
+    float:left;
+    margin-right:20px;
+}
+.footer-down-right .footer-a a:hover, .footer-down-right .footer-info a:hover{
+    color:#c9a063;
+}
+.footer-down-right span{
+    color:#777777;
+    font-size: 1.2rem;
+}
+.footer-down-right .footer-info{
+    margin-top:10px;
+}
+.footer-down-right .footer-info a{
+    color:#777777;
+    font-size:1.2rem;
+    float:left;
+    margin-right:22px;
+}
+.footer-down-right .footer-info a:last-child{
+    background-image: url(../images/police.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-right:0px;
+    padding-left:22px;
+}
+.sidebar{
+    width: 40px;
+    height: 77px;
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    margin-left:600px;
+    z-index: 840;
+}
+.sidebar a{
+    display: block;
+    width: 32px;
+    height: 23px;
+    background-color: #1a1a1a;
+    color:#fff;
+    text-align:center;
+    font-size:1.3rem;
+    padding:8px 4px 6px 4px;
+}
+.sidebar .gotop{
+    visibility: hidden;
+}
+.sidebar .goindex{
+    background-color: #c9a063;
+    padding:4px 4px 13px 4px;
+}

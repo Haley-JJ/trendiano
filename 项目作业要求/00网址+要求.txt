@@ -1,0 +1,6 @@
+网址 一共四页
+登录页：https://passport.trendiano.com/cn/user/UserAccountLogin.do?target=http%3A%2F%2Fwww.trendiano.com%2FNew_in_Shang%2FWindbreakers%2Flist.shtml
+首页：http://www.trendiano.com/index.shtml
+详情页: http://www.trendiano.com/p/3RC2092100510.shtml
+购物车：http://my.trendiano.com/order/cart.do
+要求：基本上满足页面中的所有效果，购物车数据使用***数组模拟***模拟至少 5 条，其他页面的数据可以直接写死。

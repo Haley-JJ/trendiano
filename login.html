@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <a href="index.html"></a>
+        <div class="tre-login clearfix">
+            <h3>欢迎回来！请登录</h3>
+            <form class="clearfix" action="">
+                <input class="phone" type="text" placeholder="手机号码">
+                <input type="text" placeholder="验证码" autocomplete="off">
+                <div class="pic">
+                    <img src="https://passport.trendiano.com/kaptcha.jpg?sessionId=aaajUZgFD3xjZdrUs8Ckx" alt="" />
+                </div>
+                <input type="text" placeholder="手机动态码" autocomplete="off">
+                <button class="getnum" type="button">获取动态码</button>
+                <div class="error">
+                    <div class="phone-error">手机号码格式不正确</div>
+                    <div class="code-error">请填写正确的验证码</div>
+                </div>
+                <button type="button" class="btn">登录</button>
+            </form>
+            <a class="password" href="#">忘记密码</a>
+            <a href="#">我要注册</a>
+        </div>
+        <div class="telephone-error">
+            <h3>温馨提示</h3>
+            <p>手机号码格式不正确</p>
+            <button>确定</button>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $(".getnum").click(function () {
+        if (!/1[3456789]\d{9}$/.test($(".phone").val())) {
+            $(".telephone-error").css("display", "block");
+        }
+    });
+    $(".telephone-error button").click(function () {
+        $(".telephone-error").css("display", "none");
+    });
+    $(".btn").click(function () {
+        $("form input").css("borderColor", "#ffb7c8");
+        $('.error').css('display', 'block');
+        if (/1[3456789]\d{9}$/.test($(".phone").val())) {
+            $(".phone").css("border-color", "#f0f0ef");
+            $(".phone-error").css("display", "none");
+        } else {
+            $(".phone-error").css("display", "block");
+        }
+    });
+
+</script>
+
+</html>

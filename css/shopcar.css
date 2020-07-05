@@ -1,0 +1,278 @@
+html{
+    font-size: 10px;
+}
+.wrap{
+    width: 100%;
+}
+header{
+    width: 100%;
+    line-height: 40px;
+    position: relative;
+}
+header .logo{
+    text-align:center;
+}
+header .logo a{
+    color:#666666;
+    font-weight: bold;
+    font-size:2.4rem;
+}
+header .navbar{
+    line-height: 40px;
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right:12px;
+    
+}
+.navbar a{
+    color:#666666;
+    font-size:1.2rem;
+    margin-right:15px;
+}
+.navbar a:first-child{
+    margin-right:10px;
+}
+.navbar a:last-child{
+    margin-right:0px;
+}
+section{
+    width: 100%;
+    background-color: #f4f3f3;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+section .buy-step{
+    width: 84.05%;
+    height: 90px;
+    margin:0 auto;
+    background-color: #fff;
+    border-top:4px solid #353535;
+}
+section .buy-step img{
+   margin-left:12%;
+}
+section h2{
+    width: 84.05%;
+    line-height: 40px;
+    background-color: #fff;
+    margin:0 auto;
+    font-size:1.8rem;
+    text-align: center;
+    color:#333333;
+}
+section .cart-tip{
+    height: 36px;
+    width: 85.37%;
+    background-color: #bb8808;
+    margin:0 auto;
+    position: relative;
+}
+section .cart-tip h3{
+    line-height: 40px;
+    color:#fff;
+    font-size:1.4rem;
+    text-align: center;
+}
+.cart-tip .right, .cart-tip .left{
+    border-top: 10px solid #ba506c;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    display: block;
+    border-top-color: #7e5a00; 
+}
+.cart-tip .right{
+    border-right: 10px solid transparent;
+    right: 0;
+}
+.cart-tip .left{
+    border-left: 10px solid transparent;
+    left: 0;
+}
+.cart-content{
+    width: 84.05%;
+    margin:0 auto;
+    background-color: #fff;
+}
+.cart-content table{
+    width: 92.87%;
+    margin:0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.cart-content table th{
+    line-height: 46px;
+    font-size:1.4rem;
+    font-weight: bold;
+    text-align: left;
+    padding-left:12px;
+}
+table tbody{
+    height:700px;
+}
+.cart-content table tbody tr{
+    width: 100%;
+    border-top:1px solid #f3f3f3;
+}
+.cart-content table tbody tr td{
+    vertical-align:top;
+    font-size:1.4rem;
+}
+.cart-content table tbody tr td:first-child{
+    width: 30px;
+    padding-left: 10px;
+    padding-top:70px;
+}
+.cart-content table tbody tr td:nth-child(2){
+    width: 98px;
+    padding-left:26px;
+    padding-top:15px;
+}
+.cart-content table tbody tr td:nth-child(3){
+    padding-top:26px;
+    width: 397px;
+    text-align: left;
+    color:#333;
+}
+.cart-content table tbody tr td:nth-child(3) p{
+    margin-bottom:3px;
+}
+.cart-content table tbody tr td a{
+    color:#0d5b82;
+}
+.cart-content table tbody tr td:nth-child(4){
+    width: 193px;
+    padding-top: 60px;
+    color:#0d5b82;
+}
+.cart-content table tbody tr td:nth-child(5),.cart-content table tbody tr td:nth-child(7){
+    padding-top: 60px;
+}
+.cart-content table tbody tr td:nth-child(6){
+    width: 256px;
+    padding-top:45px;
+}
+.cart-content table tbody tr td:nth-child(6)>div{
+    margin-bottom:10px;
+    position: relative;
+}
+.cart-content table tbody tr td:nth-child(6)>div .goodscount{
+    width: 50px;
+    line-height: 20px;
+    border:1px solid #e5e5e5;
+}
+.cart-content table tbody tr td:nth-child(6) .arrow-top,.cart-content table tbody tr td:nth-child(6) .arrow-down{
+    width: 10px;
+    height: 5px;
+    background-image: url(../images/btn_arrow_up_02.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position:absolute;
+    left:38px;
+    top:4px;
+    z-index:10;
+}
+.cart-content table tbody tr td:nth-child(6) .arrow-down{
+    top:13px;
+    background-image: url(../images/btn_arrow_down_10.png);
+}
+.page-num{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color:#006699;
+}
+.order-total{
+    width: 80.89%;
+    padding: 24px;
+    font-size: 1.4rem;
+    margin:0 auto;
+}
+.order-total .selectAll{
+    float:left;
+    margin-right:2.51%;
+    cursor: pointer;
+}
+.order-total a{
+    float:left;
+}
+.total-sum{
+    width: 80.89%;
+    padding:24px;
+    margin:0 auto;
+    background-color: #fff;
+    text-align: right;
+ 
+}
+.total-sum p{
+    font-size: 1.4rem;
+    margin-bottom:12px;
+}
+.total-sum p>span{
+    font-size: 2.4rem;
+}
+.total-sum .cart-price{
+    color:#d7261c;
+}
+.total-sum button{
+    padding: 4px 36px;
+    background: #BC8808;
+    cursor: pointer;
+    border: 0;
+    color:#fff;
+}
+footer{
+    height: auto;
+    padding: 36px 0;
+    text-align: center;
+    background: url(../images/bg_my_footer.png) left bottom repeat-x #f4f3f3;
+    color: #818181;
+}
+.footer-top{
+    width: 100%;
+    height:80px;
+    background-image: url(../images/car_trendiano.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.footer-down{
+    width: 100%;
+    font-size:1.3rem;
+}
+.footer-down .link{
+    line-height: 36px;
+}
+.footer-down a{
+    text-align:center;
+    color:#666666;
+}
+.copyright{
+    line-height: 36px;
+}
+.sidebar{
+    width: 32px;
+    height: 100px;
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    margin-left:43%;
+    z-index: 840;
+}
+.sidebar a{
+    display: block;
+    width: 32px;
+    height: 33px;
+    background-color: #bbbbbb;
+    color:#fff;
+    text-align:center;
+    font-size:1.2rem;
+    margin-bottom:1px;
+}
+.sidebar .gotop{
+    background-color: #aaa;
+}
+.sidebar .gotop{
+    visibility: hidden;
+}
